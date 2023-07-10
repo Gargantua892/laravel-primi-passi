@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $menu = [
+        "Home",
+        "Photos",
+        "Places",
+    ];
+
+    return view('welcome', compact('menu'));
 });
